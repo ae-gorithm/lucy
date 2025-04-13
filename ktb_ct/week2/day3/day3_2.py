@@ -22,3 +22,5 @@ if count[0] > float('inf'):
     print(count[0])
 else:
     print(-1)
+
+# 이거 dp로 푸는 게 좋음

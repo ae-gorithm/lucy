@@ -1,5 +1,5 @@
 from collections import deque
-# 우선순위큐
+# 원형큐구만?
 
 # 입력
 t = int(input())
