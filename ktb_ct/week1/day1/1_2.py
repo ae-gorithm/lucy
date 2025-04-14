@@ -11,10 +11,11 @@
 def dfs(numbers, count, add, sub, mul, div, depth, max_depth):
     if depth == max_depth + 1:
         result.append(count)
-        return
+        return # return은 재귀 함수의 조기 종료를 위해서만 사용하기
     
     if add:
         # return을 하면 안됨. 첫번째 재귀 호출 후 즉시 종료됨(단 하나의 경로만 따라가게 됨)
+        # 모든 경로의 결과를 누적해야 하는 경우에는 각 분기마다 바로 return을 사용하지 않아야 올바른 탐색이 이루어짐
         dfs(numbers, count + numbers[depth], add - 1, sub, mul, div, depth + 1, max_depth)
     if sub:
         dfs(numbers, count - numbers[depth], add, sub - 1, mul, div, depth + 1, max_depth)

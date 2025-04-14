@@ -12,10 +12,9 @@ for _ in range(t):
     positions = []
     
     while n:
-        if n & 1: # 비트 연산자 사용: 최하위 비트가 1인지 확인
+        if n & 1:
             positions.append(str(pos))
-        n //= 2 # 바텀업 방식이 맞음. 최하위 비트부터 시작해서 순차적으로 위쪽으로 이동하는 구조
-        # 2의 0, 1, 2라고 생각하면 됨
+        n //= 2
         pos += 1
     
     print(" ".join(positions))
