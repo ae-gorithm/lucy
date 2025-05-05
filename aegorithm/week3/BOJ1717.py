@@ -14,14 +14,14 @@ import sys
 input = sys.stdin.readline
 
 def find(x):
-    if array[x] != x:
+    if array[x] != x: # 부모 요소일때까지 탐색
         array[x] = find(array[x])
     return array[x]
 
 def union(x, y):
     x_root = find(x)
     y_root = find(y)
-    if x_root != y_root:
+    if x_root != y_root: # 부모가 다르면 합침
         array[y_root] = x_root
     return
 
