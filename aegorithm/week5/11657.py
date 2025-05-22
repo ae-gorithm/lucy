@@ -14,6 +14,8 @@ def dijkstra(graph, start):
     for i in range(N - 1):
         for u in range(1, N+1):
             for v, w in graph[u]:
+                # u 노드까지 도달한 적이 없는 상태라면
+                # 해당 노드를 이용해서 다른 노드까지의 최단 경로를 갱신하면 안됨
                 if distance[u] != INF and distance[v] > distance[u] + w:
                     distance[v] = distance[u] + w
     
