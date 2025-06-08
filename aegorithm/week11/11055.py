@@ -5,7 +5,7 @@ def dynamic_programming(dp, n, a):
     for i in range(n):
         for j in range(i):
             if a[j] < a[i]:
-                dp[i] = max(dp[i], dp[i]+a[j])
+                dp[i] = max(dp[i], dp[j]+a[i])
 
 n = int(input())
 a = list(map(int, input().split()))
