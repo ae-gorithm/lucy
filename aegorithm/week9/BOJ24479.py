@@ -38,7 +38,7 @@ for _ in range(m):
     graph[v].append(u) # 대입이 아니라 삽입...]
 
 for i in range(1, n+1):
-    graph[i].sort() # 마지막에 한 번씩만 정렬
+    graph[i].sort() # 마지막에 한 번씩만 정렬 => 힙큐보다 유리할 수 있음
 
 result = [0] * (n+1)
 result[r] = 1

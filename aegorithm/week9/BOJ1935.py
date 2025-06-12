@@ -27,6 +27,7 @@ def sum_postfix(n, postfix):
                 operand.append(operand1 * operand2)
             #print(operand)
          else:
+            #float은 나누기 연산이 많아질수록 절삭되는 범위가 들어남 대부분의 알고리즘 문제에서는 double 사용하기
             operand.append(float(entity))
             #print(operand)
 
