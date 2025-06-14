@@ -6,6 +6,6 @@ A, B = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-total_count = len(a) + len(b)  # 8
-common_count = len(set(a + b)) # 6
+total_count = len(a) + len(b)  # 8   1, 2, 2, 3, 4, 4, 5, 6
+common_count = len(set(a + b)) # 6   1, 2, 3, 4, 5, 6
 print(common_count*2-total_count)
